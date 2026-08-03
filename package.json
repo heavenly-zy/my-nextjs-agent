@@ -13,7 +13,6 @@
     "@base-ui/react": "^1.6.0",
     "@mastra/ai-sdk": "^1.7.0",
     "@mastra/core": "^1.55.0",
-    "@mastra/duckdb": "^1.5.2",
     "@mastra/libsql": "^1.18.0",
     "@mastra/loggers": "^1.2.0",
     "@mastra/memory": "^1.24.0",
