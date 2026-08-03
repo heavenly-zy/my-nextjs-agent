@@ -1,7 +1,7 @@
 'use client';
 
 import '@/app/globals.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { DefaultChatTransport, ToolUIPart } from 'ai';
 import { useChat } from '@ai-sdk/react';
 
@@ -34,7 +34,7 @@ import {
 function Chat() {
   const [input, setInput] = useState<string>('');
 
-  const { messages, setMessages, sendMessage, status } = useChat({
+  const { messages, sendMessage, status } = useChat({
     transport: new DefaultChatTransport({
       api: '/api/chat',
     }),
@@ -48,7 +48,7 @@ function Chat() {
   };
 
   return (
-    <div className="relative size-full h-screen w-full p-6">
+    <div className="relative size-full h-screen w-full p-4 md:p-6">
       <div className="flex h-full flex-col">
         <Conversation className="h-full">
           <ConversationContent>
@@ -94,11 +94,10 @@ function Chat() {
           </ConversationContent>
         </Conversation>
 
-        <PromptInput onSubmit={handleSubmit} className="mt-20">
+        <PromptInput onSubmit={handleSubmit} className="mt-4">
           <PromptInputBody>
             <PromptInputTextarea
               onChange={(e) => setInput(e.target.value)}
-              className="md:leading-10"
               value={input}
               placeholder="Type your message..."
               disabled={status !== 'ready'}
