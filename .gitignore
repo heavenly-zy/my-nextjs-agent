@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Mastra local databases
+mastra.db
+mastra.db-shm
+mastra.db-wal
+mastra.duckdb
+mastra.duckdb.wal
